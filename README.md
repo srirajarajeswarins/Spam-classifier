@@ -14,34 +14,42 @@ message: The SMS message text.
 **1. Data Loading and Preprocessing**
 
 Loading the Data: The dataset is loaded into a Pandas DataFrame.
-**Preprocessing:** Text data is cleaned by:
-Converting to lowercase.
-Removing numbers.
-Removing non-alphabetic characters.
-Removing extra whitespaces.
-Removing stopwords (common words that do not carry significant meaning).
+**Preprocessing:**
+Text data is cleaned by:
+    Converting to lowercase.
+    Removing numbers.
+    Removing non-alphabetic characters.
+    Removing extra whitespaces.
+    Removing stopwords (common words that do not carry significant meaning).
 
 **2. Data Splitting**
 The data is split into training and testing sets with an 80-20 split using train_test_split from scikit-learn.
 
 **3. Text Vectorization**
 The text data is converted into numerical features using TF-IDF (Term Frequency-Inverse Document Frequency) vectorization.
-**
-4. Model Training**
+
+**4. Model Training**
 A Naive Bayes classifier (MultinomialNB) is trained on the TF-IDF transformed training data.
 
 **5. Model Evaluation**
 
-The classifier's performance is evaluated using:
-Accuracy Score: The ratio of correctly predicted instances to the total instances.
-Classification Report: Precision, recall, f1-score, and support for each class.
-Confusion Matrix: A matrix showing the counts of true positive, true negative, false positive, and false negative predictions.
-ROC Curve: A graph showing the trade-off between the true positive rate and false positive rate.
-Feature Importance: Identification of the most important features (words) for predicting spam messages.
+  The classifier's performance is evaluated using:
+    Accuracy Score: The ratio of correctly predicted instances to the total instances.
+    
+    Classification Report: Precision, recall, f1-score, and support for each class.
+    
+    Confusion Matrix: A matrix showing the counts of true positive, true negative, false positive, and false negative predictions.
+    
+    ROC Curve: A graph showing the trade-off between the true positive rate and false positive rate.
+    
+    Feature Importance: Identification of the most important features (words) for predicting spam messages.
 
 **6. Visualizations**
 
-**Class Distribution:** A count plot showing the distribution of 'ham' and 'spam' messages.
-**Confusion Matrix:** A heatmap visualizing the confusion matrix.
-**ROC Curve:** A plot of the ROC curve with the AUC score.
-**Top Features:** A bar chart showing the top 20 features (words) that are most indicative of spam messages.
+  **Class Distribution:** A count plot showing the distribution of 'ham' and 'spam' messages.
+  
+  **Confusion Matrix:** A heatmap visualizing the confusion matrix.
+  
+  **ROC Curve:** A plot of the ROC curve with the AUC score.
+  
+  **Top Features:** A bar chart showing the top 20 features (words) that are most indicative of spam messages.
