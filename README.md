@@ -12,6 +12,7 @@ message: The SMS message text.
 **Project Steps**
 
 **1. Data Loading and Preprocessing**
+
 Loading the Data: The dataset is loaded into a Pandas DataFrame.
 **Preprocessing:** Text data is cleaned by:
 Converting to lowercase.
@@ -30,6 +31,7 @@ The text data is converted into numerical features using TF-IDF (Term Frequency-
 A Naive Bayes classifier (MultinomialNB) is trained on the TF-IDF transformed training data.
 
 **5. Model Evaluation**
+
 The classifier's performance is evaluated using:
 Accuracy Score: The ratio of correctly predicted instances to the total instances.
 Classification Report: Precision, recall, f1-score, and support for each class.
@@ -38,7 +40,8 @@ ROC Curve: A graph showing the trade-off between the true positive rate and fals
 Feature Importance: Identification of the most important features (words) for predicting spam messages.
 
 **6. Visualizations**
-Class Distribution: A count plot showing the distribution of 'ham' and 'spam' messages.
-Confusion Matrix: A heatmap visualizing the confusion matrix.
-ROC Curve: A plot of the ROC curve with the AUC score.
-Top Features: A bar chart showing the top 20 features (words) that are most indicative of spam messages.
+
+**Class Distribution:** A count plot showing the distribution of 'ham' and 'spam' messages.
+**Confusion Matrix:** A heatmap visualizing the confusion matrix.
+**ROC Curve:** A plot of the ROC curve with the AUC score.
+**Top Features:** A bar chart showing the top 20 features (words) that are most indicative of spam messages.
